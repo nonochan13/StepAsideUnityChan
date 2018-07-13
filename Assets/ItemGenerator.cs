@@ -64,10 +64,5 @@ public class ItemGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GetComponent<Renderer>().isVisible)
-        {
-            //ユニティちゃんが通り過ぎて画面外に出たアイテムを直ちに破棄
-            Destroy(this.gameObject);
-        }
     }
 }

@@ -22,5 +22,10 @@ public class Destroy : MonoBehaviour {
             //接触したコインのオブジェクトを破棄（追加）
             Destroy(other.gameObject);
         }
+        else if (!GetComponent<Renderer>().isVisible)
+        {
+            //ユニティちゃんが通り過ぎて画面外に出たアイテムを直ちに破棄
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -73,7 +73,7 @@ public class UnityChanController : MonoBehaviour
             //左に移動（追加）
             this.myRigidbody.AddForce(-this.turnForce, 0, 0);
         }
-        else if (Input.GetKey(KeyCode.RightArrow) && this.transform.position.x < this.movableRange)
+        else if ((Input.GetKey(KeyCode.RightArrow) || this.isRButtonDown)&& this.transform.position.x < this.movableRange)
         {
             //右に移動（追加）
             this.myRigidbody.AddForce(this.turnForce, 0, 0);
